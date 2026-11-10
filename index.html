@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday 🎂</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="bgMusic" loop>
+      <source src="all.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>	
+    <canvas id="starsCanvas"></canvas>
+    <canvas id="confettiCanvas"></canvas>
+
+    <div id="landing">
+        <div class="envelope-wrapper">
+            <div class="envelope" id="envelope">
+                <div class="envelope-flap"></div>
+                <div class="envelope-body">
+                    <div class="letter">
+                        <span class="letter-text">For Queen of November ❤️</span>
+                    </div>
+                </div>
+            </div>
+            <p class="tap-hint">A special delivery for a special soul...<br><span>(Tap to open)</span></p>
+        </div>
+    </div>
+
+    <div id="mainContent" class="hidden">
+        <section class="hero" id="hero">
+            <div class="hero-inner">
+                <div id="birthStar"></div>
+                <div class="cake-emoji">✨</div>
+                <h1 class="title" id="heroTitle">
+                    <span class="line1">Happy Birthday</span>
+                    <span class="line2" data-name></span>
+                </h1>
+                <p class="subtitle" id="typewriter"></p>
+                <div class="scroll-hint">
+                    <span>Scroll to explore the magic</span>
+                    <div class="arrow-down"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="wishes-section" id="wishes">
+            <h2 class="section-title">Wishes For You</h2>
+            <div class="wishes-grid">
+                <div class="wish-card" data-delay="0">
+                    <div class="wish-icon">🌟</div>
+                    <p>May your day be filled with all the things that make you smile.</p>
+                </div>
+                <div class="wish-card" data-delay="100">
+                    <div class="wish-icon">💖</div>
+                    <p>You are the kindest soul — the world is so lucky to have you.</p>
+                </div>
+                <div class="wish-card" data-delay="200">
+                    <div class="wish-icon">🌸</div>
+                    <p>May this year bring you endless happiness, love, and beautiful surprises.</p>
+                </div>
+                <div class="wish-card" data-delay="300">
+                    <div class="wish-icon">✨</div>
+                    <p>You inspire everyone around you — never stop being your amazing self.</p>
+                </div>
+            </div>
+        </section>
+
+
+	
+	    <section class="personality-section">
+        <div class="stat-card">
+        <div class="stat-number">1 / 8,000,000,000</div>
+        <h3>One in a Billion</h3>
+        <p>There is nobody else in the world with your heart, your laugh, or your spirit. You are truly unique<span data-name data-before=", "></span>.</p>
+        </div>
+
+        <div class="memory-gallery">
+        <div class="photo-frame"><img src="pic1.jpg" alt="Memory 1"><span class="photo-tape"></span></div>
+        <div class="photo-frame"><img src="pic2.jpg" alt="Memory 2"><span class="photo-tape"></span></div>
+        <div class="photo-frame"><img src="pic3.jpg" alt="Memory 3"><span class="photo-tape"></span></div>
+        <div class="photo-frame"><img src="pic4.jpg" alt="Memory 4"><span class="photo-tape"></span></div>
+        <div class="photo-frame"><img src="pic5.jpg" alt="Memory 5"><span class="photo-tape"></span></div>
+        <div class="photo-frame"><img src="pic6.jpg" alt="Memory 6"><span class="photo-tape"></span></div>
+        <div class="photo-frame"><img src="pic7.jpg" alt="Memory 7"><span class="photo-tape"></span></div>
+	<div class="photo-frame"><img src="pic8.jpg" alt="Memory 8"><span class="photo-tape"></span></div>
+        </div>
+        
+        
+        
+        
+        
+        
+        </section>
+ 	
+        <section class="final-section" id="final">
+    		<div class="final-card">
+        		<div class="sparkle-border"></div>
+        		<h2>Make a Magic Wish</h2>
+        		<p class="final-message">
+            			Type your secret wish below<span data-name data-before=", "></span>. When you're ready, release it into the stars.
+       			</p>
+
+        		<div class="wish-integration">
+            			<input type="text" id="userWish" placeholder="I wish for..." autocomplete="off">
+            			<button id="celebrateBtn" onclick="handleFinalWish()">✨ Release Wish & Celebrate 🎉</button>
+        		</div>
+
+        		<p class="final-sign">swipe down one more time and hold</p>
+    		</div>
+	</section>
+    </div>
+	<div class="nebula"></div>
+
+	<footer class="forever-footer">
+    		This page stays here for you, forever. <br>
+    		Celebrating 16 years of <span data-name data-after="’s "></span>brilliance. <br>
+		Made with Love
+	</footer>
+
+	
+    <form id="wishForm" action="https://formspree.io/f/mjgaerzg" method="POST" style="display:none;">
+        <input type="text" name="Sender" id="wishSender" value="">
+        <input type="text" name="WishContent" id="hiddenWishInput">
+    </form>
+
+    <script src="app.js"></script>
+</body>
+</html>
